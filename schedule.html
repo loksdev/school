@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Busy Day Schedule</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+  }
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .time-column {
+    background-color: #f2f2f2;
+  }
+  .event-row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .highlight-row {
+    background-color: #ffff99;
+  }
+  .highlight-column {
+    background-color: #99ccff;
+  }
+</style>
+</head>
+<body>
+
+<h2>Day Schedule</h2>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Event</th>
+  </tr>
+  <tr class="highlight-row event-row">
+    <td class="time-column">7:00 AM</td>
+    <td>Wake up and take a shower</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">8:00 AM</td>
+    <td>Breakfast</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">9:00 AM</td>
+    <td>Team Meeting</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">10:30 AM</td>
+    <td>Project Work</td>
+  </tr>
+  <tr class="highlight-row event-row">
+    <td class="time-column">12:00 PM</td>
+    <td>Lunch with Client</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">1:30 PM</td>
+    <td>Conference Call</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">3:00 PM</td>
+    <td>Email Correspondence</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">4:30 PM</td>
+    <td>Report Review</td>
+  </tr>
+  <tr class="highlight-row event-row">
+    <td class="time-column">6:00 PM</td>
+    <td>Dinner</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">7:30 PM</td>
+    <td>Evening Walk</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">9:00 PM</td>
+    <td>Leisure Time</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column highlight-column">10:30 PM</td>
+    <td>Prepare for Next Day</td>
+  </tr>
+  <tr class="event-row">
+    <td class="time-column">11:00 PM</td>
+    <td>Sleep</td>
+  </tr>
+</table>
+
+</body>
+</html>
