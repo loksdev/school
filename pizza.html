@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Party Planner</title>
+</head>
+<body>
+    <h1>Pizza Party Planner</h1>
+    <div id="guestList">
+      <p>Jane: 2 slices - Mushroom, onion, peppers, olives</p>
+      <p>Lisa: 3 slices - Pepperoni, ham, pineapple</p>
+      <p>Taylor: 3 slices - Extra cheese, pepperoni, sausage, bacon</p>
+      <p>Chris: 2 slices - Mushroom, sausage, bacon, ham, onion, peppers</p>
+      <p>Alyssa: 1 slice - Pepperoni, bacon</p>
+      <p>Will: 2 slices - Extra cheese, sausage, bacon, onion, peppers, olives</p>
+      <p>Jessica: 2 slices - Pepperoni, bacon, ham, pineapple, onion, peppers</p>
+    </div>
+    <script>
+        const guests = {
+          Jane: { slices: 2, toppings: ['Mushroom', 'Onion', 'Peppers', 'Olives'] },
+          Lisa: { slices: 3, toppings: ['Pepperoni', 'Ham', 'Pineapple'] },
+          Taylor: { slices: 3, toppings: ['Extra cheese', 'Pepperoni', 'Sausage', 'Bacon'] },
+          Chris: { slices: 2, toppings: ['Mushroom', 'Sausage', 'Bacon', 'Ham', 'Onion', 'Peppers'] },
+          Alyssa: { slices: 1, toppings: ['Pepperoni', 'Bacon'] },
+          Will: { slices: 2, toppings: ['Extra cheese', 'Sausage', 'Bacon', 'Onion', 'Peppers', 'Olives'] },
+          Jessica: { slices: 2, toppings: ['Pepperoni', 'Bacon', 'Ham', 'Pineapple', 'Onion', 'Peppers'] }
+        };
+
+        let totalSlices = 0;
+        let commonToppings = null;
+        let moreGuests = true;
+
+        while (moreGuests) {
+          let guestName = prompt("Enter the name of the guest coming over:");
+          if (guests.hasOwnProperty(guestName)) {
+            totalSlices += guests[guestName].slices;
+            if (commonToppings === null) {
+              commonToppings = guests[guestName].toppings.slice();
+            } else {
+              commonToppings = commonToppings.filter(topping => guests[guestName].toppings.includes(topping));
+            }
+          } else {
+            alert("Guest not found. Please enter one of the: Jane, Lisa, Taylor, Chris, Alyssa, Will, Jessica.");
+          }
+
+          moreGuests = confirm("Would you like to add more guests?");
+        }
+
+        let message = `You will need to order ${totalSlices} slices of pizza.\n`;
+        if (commonToppings && commonToppings.length > 0) {
+          message += `The toppings you can choose from are: ${commonToppings.join(', ')}.`;
+        } else {
+          message += "There are no common toppings. You need to get plain pizza.";
+        }
+
+        alert(message);
+    </script>
+    </body>
+</html>
+  
