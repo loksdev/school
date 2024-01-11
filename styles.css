@@ -1,47 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.navigation {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
+table {
     width: 100%;
-    top: 0;
+    border-collapse: collapse;
 }
 
-.navigation a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }
 
-.team-container {
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.team-member {
-    margin: 20px;
-    float: left;
-    width: 200px;
-}
-
-.team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.bio {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-}
-
-.bio h3 {
-    margin-top: 0;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
